@@ -1,0 +1,480 @@
+/* 
+ - there is general different parts of template and general classes
+ 
+ -- Apps
+ 
+ 1) General orange menu
+ 2) 
+
+ -- Classes
+
+ 1) .txt-center - align text to center
+ 2) .txt-bold - sets font weight to 600
+ 3) .txt-orange - makes text orange color
+ 4) .txt-white - makes text white color
+ 5) .droid-serif - sets font Droid-Serif
+ 4) .flex - display flex
+ 5) .clear-all - clear margins paddings
+ 6) .flex-center - giving display flex and content center
+ 7) .flex-between - giving display flex and justif content between
+ 5) .flex-end - justify content flex-end
+ 8) .all-left - align all childs to left
+ 9) .to-center - align element to center both X and Y osis
+ 10) .to-centerX - align element to center on X osis
+ 11) .to-centerY - align element to center on Y osis
+ 12) .section-header - sets cenetered header text to sections 
+ 13) .bg-orange - sets background orange and inner content to white
+ 14) .hover-orange-parent - sets orange hover effect and white content to chilrens of parent
+ 15) .hover-orange - sets orange hover effect and white content to element
+ 16) .circle-icon - makes circle icons div > i
+ 17) .overly - makes black overly in the background
+ 18) .clear-both - clear both float
+*/
+
+/* overly class */
+
+.overly{
+    background: #00000098;
+    position: absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height: 100%;
+}
+
+/* section header class */
+.section-header{
+    text-align: center;
+    width: 100%;
+    color: #000;
+}
+
+.section-header h6{
+    letter-spacing: 10px;
+    font-weight: 400;
+    margin:0;
+}
+
+.section-header h1{
+    margin:0;
+    padding-bottom: 20px;
+    letter-spacing: 5px;
+    font-family: 'Dosis', sans-serif;
+}
+
+.section-header span{
+    color: #fd602c;
+}
+
+.section-header >div{
+    display: inline-block;
+    position: relative;
+}
+
+.section-header > div::after{
+    height: 2.5px;
+    position: absolute;
+    content: "";
+    background: #000;
+    width: 34px;
+    bottom: -2px;
+    left:50%;
+    transform: translateX(-50%);
+}
+
+/* --------- Navigator class ----- */
+
+.navigator a::after{
+    content: '\/';
+    padding: 0 5px;
+}
+
+/* --------- Post class --------- */
+
+.post{
+    overflow: hidden;
+}
+
+.post-content{
+    border: 1px solid rgb(224, 224, 224);
+    padding-top: 50px;
+    padding-bottom: 30px;
+    position: relative;
+}
+
+.post .post-img{ 
+    position: relative;
+}
+
+.post .post-img img{  
+    width: 100%; 
+    height: 100%;
+    transition: all .3s ease;
+}
+
+.post-text{
+    padding: 7px 30px 0 30px;
+    line-height: 23px;
+}
+
+
+
+/* icon class */
+
+.circle-icon{
+    padding: 28px;
+    border-radius: 100%;
+    border: 1px solid rgb(230, 230, 230);
+    display: inline-block;
+    font-size: 18px;
+    position: relative;
+    transition: all .2s ease;
+}
+
+.square-icon{
+    padding: 20px;
+    background: #fd602c;
+    color: #fff;
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    transition: all .2s ease;
+}
+
+.circle-icon i,
+.square-icon i{
+    position: absolute;
+    left:50%;
+    top:50%;
+    transform: translate(-50%,-50%);
+}
+
+
+/* clear all class */
+.clear-all{
+    padding:0!important;
+    margin:0!important;
+}
+
+/* background color and hover orange classes */
+.bg-orange,
+.hover-orange:hover,
+.bg-orange >*, 
+.hover-orange-parent > *:hover{
+    background:#fd602c!important;
+    color: #fff!important;
+}
+
+.bg-orange:hover,
+.hover-orange-parent >*:hover a{
+    color: #fff!important;
+}
+
+.hover-orange:hover h1,
+.hover-orange:hover h2,
+.hover-orange:hover h3,
+.hover-orange:hover h4,
+.hover-orange:hover h5,
+.hover-orange:hover h6,
+.hover-orange:hover a,
+.hover-orange:hover p,
+.hover-orange:hover i,
+.bg-orange h1,
+.bg-orange h2,
+.bg-orange h3,
+.bg-orange h4,
+.bg-orange h5,
+.bg-orange h6
+.bg-orange a,
+.bg-orange p,
+.bg-orange i{
+    color: #fff!important;
+}
+
+
+/* text styling classes */
+
+.txt-orange{
+    color: #fd602c!important;
+}
+.txt-white{
+    color: #fff!important;
+}
+.txt-center{
+    text-align:center;
+}
+.txt-bold{
+    font-weight: 600;
+}
+.droid-serif {
+    font-family: 'Droid Serif', serif;
+}
+
+/* flex classes */
+
+.flex,
+.flex-center,
+.flex-between,
+.flex-end{
+    display: flex!important;
+}
+
+.flex-center{
+    justify-content: center!important;
+    align-items: center!important;
+}
+
+.flex-between{
+    justify-content: space-between!important;
+}
+
+.flex-end{
+    justify-content: flex-end!important;
+}
+
+/* content align classes */
+.all-left{
+    text-align: left!important;
+    margin-left: 0;
+    padding-left: 0;
+}
+
+.all-left>*::after,
+.all-left>*::before{
+    left:0!important;
+    transform: translateX(0)!important;
+}
+
+.to-center{
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.to-centerX{
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.to-centerY{
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.clear-both{
+    clear: both;
+}
+
+.clear-after::after{
+    content: "";
+    clear: both;
+    display: table;
+    overflow: hidden;
+}
+
+/* All menus */
+
+/* General orange menu / white menu */
+
+.header-menu .animated{
+    -webkit-animation-duration: .5s;
+    animation-duration: .5s;
+}
+
+.menu-brand{
+    display: flex;
+    align-items: center;
+    padding: 20px 15px;
+}
+
+.header-menu ul li{
+    float: left;
+}
+
+.header-menu ul li a{
+    padding: 30px 15px;
+    text-transform: uppercase;
+    transition: all .2s ease;
+    display: block;
+}
+
+.header-menu ul li:hover> a{
+    color: #fd602c;
+}
+
+.header-menu ul li .active{
+    color: #fd602c;
+}
+
+.header-menu ul li ul{
+    background: #fff;
+    position: absolute;
+    display: none;
+    filter:alpha(opacity=0);
+    z-index: 1000;
+}
+
+.header-menu ul li:hover > ul,
+.header-menu ul li:hover .container ul{
+   display: block;
+ 
+}
+
+.header-menu ul li ul li{
+    float: none;
+}
+
+.header-menu ul li ul li a{
+    padding: 10px 30px;
+    text-transform: capitalize;
+    transition: all .5s ease;
+}
+
+.header-menu ul li ul li:hover >a{
+    color: #000;
+}
+ 
+.header-menu ul li ul li ul{
+    transform: translate(98%,-30%);   
+}
+
+.col-menu-wrapper{
+    left:0;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    background: transparent!important;
+}
+
+.col-menu-wrapper .container{
+    background: #fff;
+    padding: 10px 30px 30px 30px;
+    border-top: 1px solid rgb(223, 223, 223);
+}
+
+.col-menu-wrapper .row ul{
+    position: static;
+    transform: translate(0%,0%);
+}
+
+.col-menu-wrapper .row ul i{
+    margin-right: 10px;
+    font-size: 14px;
+}
+
+.col-menu-wrapper .row ul li a{
+    padding-left: 0;
+}
+
+.col-menu-wrapper .row ul li:hover a{
+    margin-left: 10px;
+}
+
+.col-menu-wrapper p{
+    color: #242424;
+    font-weight: 600;
+    padding: 10px 30px 10px 0;
+    margin:0;
+    text-transform: uppercase;
+}
+
+.release-afish{
+    background: #242424;
+    color: #fff;
+    border-radius: 2px;
+    font-size: 11px;
+    padding: 2px;
+    margin-left: 10px;
+}
+
+.medium-margin a{
+    padding: 6px 0px!important;
+}
+
+/* .black menu */
+
+.header-menu.black ul li ul div,
+.header-menu.black ul li ul{
+    background: #242424;
+}
+
+.header-menu.black ul li ul li:hover >a{
+    color: #fff;
+}
+
+.header-menu.black ul li ul p{
+    color: #fff;
+}
+
+.header-menu.black .release-afish{
+    background: #fff;
+    color: #242424;;
+}
+
+/* All buttons */
+
+.button{
+    background: #fd602c;
+    color: #fff;
+    border-radius: 20px;
+    padding: 11px 35px;
+    display: inline-block;
+    text-transform: capitalize;
+    border: none;
+    transition: all .2s ease;
+}
+
+.button:hover{
+    background: #000;
+    color: #fff;
+}
+
+.button i{
+    font-size: 12px;
+}
+
+.button.sq-button{
+    border-radius: 0;
+    background: #fff;
+    color: #000;
+}
+
+.button.sq-button:hover{
+    color: #fff;
+    background: #000;
+}
+
+.button.bordered{
+    border: 1px solid #fd602c;
+    background-color: transparent;
+    color: #fd602c;
+}
+
+.button.bordered:hover{
+    background-color: #fd602c;
+    color: #fff;
+}
+
+.button.square{
+    border-radius: 2px;
+}
+
+.button.bordered.dark{
+    border: 1px solid #e9e9e9;
+    background-color: transparent;
+    color: #000000;
+}
+
+.button.dark:hover{
+    background: #000;
+    color: #fff;
+    border-color: #000;
+}
+
+.button.form{
+    background-color: #4ebd4a;
+    padding: 11px 60px;
+    border-radius: 0;
+}

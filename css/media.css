@@ -1,0 +1,286 @@
+/* Tablets Ipad/Tab */
+
+@media (min-width: 768px) and (max-width: 1024px){
+
+  /* Expand menu */
+  .menu-opener{
+        visibility: visible;
+    }
+
+    .header-menu .general-ul{
+       background: #fff;
+       position: absolute;
+       width: 100%;
+       margin-top: 80px;
+       transition: height .3s ease;
+       z-index: 9999;
+       overflow: scroll;
+       height: 40vh;
+       left: 0;
+       height: 0;
+    }
+
+    .header-menu .general-ul> li{
+        float: none;
+        background: #fff;
+        z-index: 9999;
+        width: 100%;
+        display: block;
+        position: relative;
+    }
+     
+    .header-menu ul li ul{
+        display: block;
+        position: relative;
+        z-index: 9999;
+    }
+
+
+
+  /* Slider section */
+     .fSliderr{
+        height: 30vh;
+     }
+
+  /* Project section */
+
+  .project-section .col-lg-5{
+        padding-top: 60px;
+        justify-content: flex-start!important;
+        padding-left: 30px;
+   }
+
+   /* Video section  */
+    .video-content {
+        width: 80%;
+    }
+
+    .video-content h1 {
+        font-size: 28px;
+    }
+
+    /* Album plugin */
+
+    .album.clm-3 .album-item{
+        width: 50%;
+    }
+
+    .album.clm-4 .album-item{
+        width: 50%;
+    }
+    
+    .album-screen .photo-wrapper{
+        width: 100vw;
+        height: 90vh;
+        text-align: left;
+        right: 0;
+        padding-top: 100px;
+    }
+
+    .album-screen .photo-wrapper img{
+        width: 100%;
+    }
+
+    /* ------- Subscribe section ---------- */
+
+    .subscribe-section{
+        padding: 80px 100px;
+    }
+
+    .subscribe-section p{
+        font-size: 18px;
+    }
+
+    .subscribe-section .inp-group input[type='text']{
+        width: 74%;
+    }
+
+    .subscribe-section .inp-group button{
+        width: 26%;
+    }
+
+    /* Footer */
+
+    footer .col-lg-3{
+        margin-bottom: 30px;
+    }
+
+    /* ========== LAYOUT =========== */
+
+    .parallax-section.ly ul{
+        padding-left: 30px;
+    }
+
+    .parallax-section.ly ul li{
+        padding: 40px 0;
+    }
+
+
+    .orange-section.green.ly .col-lg-3 a{
+        float: right;
+    } 
+
+    .services-section.ly .fSwipe-slider{
+        margin-top: 30px;
+    }
+
+    .client-section .fSwipe-slider.second{
+        margin-top: 40px;
+    }
+
+    .aboutUs-section .img-bottom{
+        margin-top: 20px;
+    }
+
+    .top-offset{
+        margin-top: 40px;
+    }
+
+    .responsive-section .row{
+        background-image: none;
+    }
+
+    .responsive-section .row .col-6 {
+        margin-left: 30px;
+        padding-top: 30px;
+        padding-bottom: 150px;
+    }
+
+
+    .progres+div{
+        left: 50%;
+    }
+
+    .tab-section .tabSlide> ul {
+        width: 90%;
+    }
+
+    .parallax-section.about.services {
+        padding: 100px 10px;
+    }
+
+    .featured-section .feature img {
+        height: 100px;
+        width: 100px;
+    }
+
+    .registr{
+        margin-top: 100px;
+    }
+
+    .button.form {
+        margin-bottom: 30px;
+        margin-top: 20px;
+    }
+
+    .mapouter {
+        margin-bottom: 40px;
+    }
+
+    .contact-section {
+        padding: 50px 0;
+    }
+
+    .addres-section {
+        padding: 50px 0 40px 0;
+    }
+
+}
+
+
+/* Phone version Iphone X/6/7/8 */
+
+@media (min-width: 320px) and (max-width: 480px) {
+    .menu-opener{
+        visibility: visible;
+    }
+
+    .header-menu .general-ul{
+       background: #fff;
+       position: absolute;
+       width: 100%;
+       margin-top: 80px;
+       transition: height .3s ease;
+       z-index: 9999;
+       overflow: scroll;
+       height: 40vh;
+       left: 0;
+       height: 0;
+    }
+
+    .header-menu .general-ul> li{
+        float: none;
+        background: #fff;
+        z-index: 9999;
+        width: 100%;
+        display: block;
+        position: relative;
+    }
+     
+    .header-menu ul li ul{
+        display: block;
+        position: relative;
+        z-index: 9999;
+    }
+
+    footer .col-12{
+        margin-bottom: 30px;
+    }
+
+    .mix-section.about .section-title {
+        margin-bottom: 30px;
+        margin-top: 20px;
+    }
+
+    .tabSlide> ul {
+        flex-wrap: wrap;
+    }
+
+    .mapouter {
+        margin-bottom: 40px;
+    }
+
+    .contact-section {
+        padding: 50px 0;
+    }
+
+    .addres-section {
+        padding: 50px 0 40px 0;
+    }
+
+    .services-section .img-div,
+    .features-section .img-div{
+      display: none;
+    }
+
+    .services-section .content-wrapper, 
+    .features-section .content-wrapper {
+        padding: 30px 30px 30px 0;
+        position: relative;
+        width: 100%;
+    }
+
+    .services-section .content-div, 
+    .features-section .content-div {
+        padding: 20px;
+        padding-left: 40px;
+        background: #fff;
+        margin-left: 0px;
+    }
+
+    .video-content {
+        padding: 150px 0;
+        position: relative;
+        top: 0;
+        width: 90%;
+    }
+
+    .subscribe-section .inp-group input[type='text']{
+        width: 60%;
+    }
+
+    .subscribe-section .inp-group button{
+        width: 40%;
+    }
+
+}

@@ -1,0 +1,411 @@
+/* ----- Album Plugin ------------*/
+
+.album{
+    display: flex;
+    flex-flow: row wrap;
+    height: 100%;
+    width: 100%;
+}
+
+.album.clm-4 .album-item{
+    width: 25%;
+}
+
+.album.clm-3 .album-item{
+    width: 33.33333%;
+}
+
+.album.clm-2 .album-item{
+    width: 50%;
+}
+
+.album-item{
+    position: relative;
+    overflow: hidden;
+}
+
+.album-item img{
+    height: 100%;
+    width: 100%;
+    transition: all .2s ease;
+}
+
+.album-title{
+    position: absolute;
+    background: rgba(0, 0, 0, 0.877);
+    top: 0; left:0; bottom:0; right:0;
+    padding: 30px;
+    opacity: 0;
+    transition: all .2s ease;
+    cursor: pointer;
+}
+
+.album-title >*{ 
+    font: 400 16px/21px "Open Sans", sans-serif;
+    color: #fff; 
+    margin-bottom:0;
+}
+
+.album-title p{ 
+    color: #8d8c8c; 
+    font-size: 13px;
+}
+
+.album-item:hover img{
+    transform: scale(1.2);
+}
+
+.album-item:hover> .album-title{
+    opacity: 1;
+}
+
+/* Desgin for javascript elements */
+
+.album-screen{
+    background: rgba(0, 0, 0, 0.74);
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    top:0;
+    left:0;
+    display: none;
+    z-index: 99999999;
+}
+
+.cls-btn,.prv-btn,.nxt-btn{
+    position: absolute;
+    height: 45px;
+    width: 45px;
+    cursor: pointer;
+    z-index: 9999999999999991;
+}
+
+.album-screen .cls-btn{
+    background: url('../icons/albumPlugin/icons.png') no-repeat scroll -92px 0 transparent;
+    right: 3%;
+    top: 3%;
+}
+
+.album-screen .cls-btn:hover{
+    background: url('../icons/albumPlugin/icons.png') no-repeat scroll -92px -46px transparent;
+}
+
+.album-screen .prv-btn{
+    left: 3%;
+    top: 50%;
+    transform: translateY(-50%);
+    background: url('../icons/albumPlugin/icons.png') no-repeat scroll 0 0 transparent;
+
+}
+
+.album-screen .prv-btn:hover{
+    background: url('../icons/albumPlugin/icons.png') no-repeat scroll 0 -46px transparent;
+}
+
+.album-screen .nxt-btn{
+    right: 3%;
+    top:50%;
+    transform: translateY(-50%);
+    background: url('../icons/albumPlugin/icons.png') no-repeat scroll -46px 0 transparent;
+}
+
+.album-screen .nxt-btn:hover{
+    background: url('../icons/albumPlugin/icons.png') no-repeat scroll -46px -46px transparent;
+}
+
+.album-screen .photo-wrapper{
+    position: relative;
+    left:50%;
+    transform: translateX(-50%);
+    height: 100%;
+    width: 50%;
+    text-align: center;
+    background: transparent;
+}
+
+.album-screen .album-img{
+    position: relative;
+    margin-top: 4%;
+    width: 90%;
+    height: 90%;
+    object-fit: cover;
+}
+
+.photo-title{
+    text-align: left;
+    padding-left: 5%;
+    position: relative;
+}
+
+.photo-title>*{
+    margin:0;
+    color: #fff;
+}
+
+.photo-count{
+    position: absolute;
+    right: 5%;
+    top: 0;
+}
+
+
+/* ------------ fSwipe slider --------------- */
+
+.fSwipe-slider{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 5px;
+}
+
+.fSwipe-slider >ul{
+    width: 100%;
+    margin:0;
+    padding:0;
+    list-style: none;
+    position: relative;
+    overflow: hidden;
+    transition: margin  .4s ease-out;
+    -moz-transition:  margin  .4s ease-out;
+    -webkit-transition: margin  .4s ease-out;
+    display: block;
+}
+
+.fSwipe-slider >ul::after {
+    content: "";
+    clear: both;
+    display: table;
+    overflow: hidden;
+  }
+
+.fSwipe-slider >ul li{
+    float: left;
+    width: inherit;
+}
+
+.fSwipe-slider .fSwipe-tmb{
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 12px;
+    margin-top: 5px;
+    text-align: center;
+}
+
+.fSwipe-slider .fSwipe-tmb>ul{
+    display: inline-block;
+}
+
+
+.fSwipe-slider .fSwipe-tmb ul li{
+    display: inline-block;
+    background: rgb(145, 145, 145);
+    height: 12px;
+    width: 12px;
+    border-radius: 100%;
+    cursor: pointer;
+}
+
+.fSwipe-slider .fSwipe-tmb ul li.active{
+    background: rgb(199, 199, 199);
+}
+
+.fSwipe-slider .fSwipe-tmb ul li:hover{
+    background: rgb(199, 199, 199);
+}
+
+.fSwipe-slider .fSwipe-tmb ul li+li{
+    margin-left: 12px;
+}
+
+/* --------------- tabSlide plugin ----------------- */
+
+.tabSlide{
+    position: relative;
+}
+
+.tabSlide> ul{
+    list-style: none;
+    margin:0;
+    padding:0;
+    width: 100%;
+    display: flex;
+    margin-bottom: 0px;
+}
+
+.tabSlide> ul li{
+    padding: 20px 30px;
+    background: #f7f7f7;
+    color: rgb(27, 27, 27);
+    flex:1;
+    cursor: pointer;
+    text-align: center;
+    border-right: 1px solid #e6e6e6;
+}
+
+.tabSlide> ul li:last-child{
+    border:none;
+}
+
+.tabSlide> ul li.active,
+.tabSlide> ul li.active:hover,
+.tabSlide> ul li:hover{
+    background: #fd602c;
+    border-color: #fd602c;
+    color: #fff;
+}
+
+.tabSlide-content img{
+    width: 100%;
+}
+
+.tabSlide-content p{
+    margin:0;
+    margin-top: 30px;
+}
+
+.tabSlide-img{
+    height: 140px;
+    width:  140px!important;
+    object-fit: contain;
+    float: left;
+    margin-right: 20px;
+}
+
+.tabSlide-content{
+    position: relative;
+    margin-top: 20px;
+}
+
+.tabSlide .tabSlide-content >div{
+    display: none;
+    animation-duration: .4s;
+}
+
+/* -------------------- fade slide plugin ------------------- */
+
+.fFade-slide{
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.fFade-slide ul{
+    list-style: none;
+    margin:0;
+    padding:0;
+    height: 100%;
+    position: relative;
+    display: block;
+    flex: 4;
+}
+
+.fFade-slide > div{
+    flex: 1;
+    text-align: center;
+}
+
+.fFade-slide ul li{
+    position: absolute;
+    height: 100%;
+    display: none;
+}
+
+.fFade-slide ul li img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.fFade-slide .prev,
+.fFade-slide .next{
+    padding: 5px 10px;
+    color: #fff;
+    cursor: pointer;
+    text-decoration: none;
+    background: rgb(218, 218, 218);
+    border-radius: 50px;
+    font-size: 12px;
+    margin-top: 10px;
+    display: inline-block;
+}
+
+.fFade-slide .next{
+    margin-left: 5px;
+}
+
+/* -------------------- Accardion plugin ------------------- */
+
+.accardion,
+.accardion ul{
+    list-style: none;
+    margin:0;
+    padding:0;
+}
+
+.accardion> li{
+    border: 1px solid rgb(223, 223, 223);
+}
+
+.accardion> li i{
+    font-style: normal;
+    font-size: 25px;
+    line-height: 15px;
+}
+
+.accardion> li p{
+    margin: 0;
+    display: inline-block;
+    padding: 10px 10px;
+    width: 100%;
+    cursor: pointer;
+}
+
+.accardion> li.active{
+    background: rgb(245, 245, 245);
+    border-bottom: 0;
+}
+
+.accardion> li:last-child.active{
+    border: 1px solid rgb(223, 223, 223);
+}
+
+.accardion li i{
+    margin-right: 5px;
+}
+
+.accardion li ul li>*{
+    padding: 20px 20px 30px 0px;
+    line-height: 25px;
+}
+
+.accardion li> ul{
+   background: #fff;
+   padding-left: 40px;
+   height: 0;
+   overflow: hidden;
+   visibility: hidden;
+   transition: all .1s ease;
+}
+
+/* --------------- Progress bar --------------*/
+
+.prog-bar{
+    width: 100%;
+    height: 35px;
+    background: #fff;
+    position: relative;
+}
+
+.prog{
+    background: #fd602c;
+    height: inherit;
+    white-space: nowrap;
+    box-sizing: border-box;
+    padding-left: 20px;
+    font-size: 15px;
+    line-height: 35px;
+    color:#fff;
+}

@@ -1,0 +1,2465 @@
+body{
+    margin:0;
+    padding: 0;
+    line-height: 23px;
+    color: #727272;
+    font: 14px 'Open Sans', sans-serif;
+}
+
+a{
+    color: #727272;
+    transition: all .2s ease;
+}
+
+a:hover{
+    text-decoration: none;
+    color: #727272;
+}
+
+p{
+    margin:0;
+}
+
+ol, ul {
+    list-style: none;
+    padding:0;
+    margin:0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: normal;
+    color: #272727;
+}
+
+h1{
+    font-size: 40px;
+    line-height: 40px;
+}
+
+h5{
+    font-size: 18px;
+}
+
+h4 {
+    font-size: 22px;
+    line-height: 25px;
+    letter-spacing: 0px;
+}
+
+
+/* General classes */
+
+.container{
+    max-width: 1170px;
+    width: auto;
+}
+
+/* ---------header----------- */
+
+/* header line */
+.header-line{
+    padding: 1.1rem 0;
+}
+
+.header-line ul li{
+    padding: 0 10px;
+    display: inline-block;
+    font-size: 14px;
+    color: #8d8c8c;
+}
+
+header .bg-orange ul li{
+    color: #fff;
+}
+
+.header-line .col-12,.header-menu .col-12{
+    display: flex;
+    justify-content: space-between
+}
+
+.header-line .col-12 a{
+    color: #fff;
+    transition: all .3s ease 0s;
+}
+
+.header-line .col-12 a:hover{
+    color: #000;
+}
+
+.header-line .col-12 .split{
+    border-right: 1px solid #fff;
+}
+
+/* ---------- Expand menu / phone */
+
+.menu-opener{
+    position: absolute;
+    right: 30px;
+    top: 0;
+    bottom:0;
+    visibility: hidden; 
+}
+
+.menu-opener i{
+    font-size: 22px;
+    cursor: pointer;
+}
+
+.opened{
+    visibility: visible!important;
+}
+
+/*  header menu  */
+
+.header-menu{
+    background: #fff;
+    height: 80px;
+}
+
+.header-menu.fixed{
+    position: fixed;
+    top:0;
+    left: 0;
+    width:100%;
+    z-index: 9999999;
+    background: #fff;
+}
+
+/* Slider */
+
+.fSliderr{
+    height: 82vh;
+    width: 100%;
+    background-color: #8d8c8c;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+}
+
+/*  About section  */
+
+.about-section{
+    padding: 100px 0;
+}
+
+.about-img{
+    position: relative;
+    height: 190px;
+    width: 190px;
+    float: left;
+}
+
+.about-img>img{
+    border-radius: 100%;
+    object-fit: cover;
+}
+
+.about-circle{
+    position: absolute;
+    transform: translateX(50%);
+    height: 100%;
+    width:100%;
+    border-radius: 100%;
+    background:#fd602ce1;
+}
+
+.about-circle>*{
+    color: #fff;
+    font-size: 22px;
+}
+
+.about-section-text{
+    padding: 0 40px;
+    line-height: 22px;
+}
+
+.about-section .col-lg-6.flex{
+    padding-top: 60px;
+}
+
+/* ---------- Features section / services section -----------*/
+.services-section,
+.features-section{
+    position: relative;
+    background-color: #f6f6f6;
+}
+
+.services-section .section-header,
+.features-section .section-header{
+    margin-left: 15px;
+}
+
+.services-section .img-div,
+.features-section .img-div,
+.content-wrapper{
+    width: 50vw;
+}
+
+.services-section .img-div img,
+.features-section .img-div img{
+    position: relative;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.services-section .content-wrapper,
+.features-section .content-wrapper{
+    padding: 80px 80px 80px 0;
+    position: relative;
+}
+
+.services-section .content-div,
+.features-section .content-div{
+    padding: 70px;
+    padding-left: 70px;
+    background: #fff;
+    margin-left: -125px;
+}
+
+.features-section .content-div ul{
+    margin-top: 50px;
+}
+
+.features-section .content-div ul li{
+     padding: 7.5px 0;
+     line-height: 23px;
+}
+
+.features-section .content-div ul li i{
+    margin-right: 15px;
+    font-size: 13px;
+}
+
+.features-section .content-div .button{
+    margin-top: 50px;
+}
+
+/* ---------- Project section ----------- */
+
+.project-section{
+    padding: 80px 0;
+}
+
+.project-section .col-lg-5{
+    padding-top: 60px;
+}
+
+.project-section img{
+    width: 100%;
+}
+
+.project-section p{
+    line-height: 25px;
+}
+
+.project-section .icon-group{
+    padding-top: 20px;
+}
+
+.project-section .circle-icon i{
+    color: #000;
+}
+
+.project-section .circle-icon + .circle-icon{
+    margin-left: 20px;
+}
+
+.project-section .button{
+    margin-top: 50px;
+}
+
+/* ---------- Video section --------- */
+
+.video-wrapper{
+    height: 100%;
+    width: 100%;
+    position: relative;
+   
+}
+
+.video-background {
+    background: #000;
+    position: absolute;
+    top: 0; right: 0; bottom: 0; left: 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+.video-background iframe{
+    height: calc(100% + 360px);
+    width: 100%;
+    margin-top: -180px;
+    margin-bottom: -180px;
+}
+
+.video-content{
+    padding: 150px 0;
+    position: relative;
+    top: 0;
+    width: 40%;
+}
+
+.video-content h1{
+    color: #fff;
+}
+
+.video-content .circle-icon{
+    background: rgba(0, 0, 0, 0.644);
+    text-transform: uppercase;
+    padding: 35px;
+    border: none;
+    cursor: pointer;
+    color: #fff;
+}
+
+.video-content .circle-icon i{
+    font-style: normal;
+    color: #fff;
+    font-size: 14px;
+}
+
+.video-content .circle-icon:hover{
+    background: rgba(255, 255, 255, 0.644);
+}
+
+/* ------- Team section ---------- */
+
+.team-section{
+    padding: 110px 0;
+}
+
+.team-section .section-header{
+    margin-bottom: 65px;
+}
+
+.team-section .post:hover img{
+    transform: scale(1.1);
+}
+
+.team-section .post-img{
+    overflow: hidden;
+}
+
+.team-section .post-content,
+.team-section .post{
+    background: #fff;
+    transition: all .3s ease;
+}
+
+.team-section .post:hover .post-content{
+    transform: translateY(-40%);
+}
+
+/* ---------- Services section ----------*/
+
+.services-section .content-div{
+    padding: 75px;
+}
+
+.services-section .section-header{
+    margin-bottom: 60px;
+}
+
+.services-section .post-content{
+    border:none;
+    padding-top: 10px;
+}
+
+.services-section .circle-icon{
+    padding: 50px;
+    font-size: 30px;
+    color: #fd602c;
+}
+
+.services-section .post-title{
+    margin: 15px 0;
+}
+
+.services-section .post-text{
+    padding: 0;
+}
+
+.services-section .post:hover .circle-icon{
+    background: #fd602c;
+    color: #fff;
+}
+
+.services-section .post:hover .post-title h4{
+    color: #fd602c;
+}
+
+/* ---------  Works section  ---------*/
+
+.works-section{
+    padding: 110px 0;
+}
+
+.works-section .section-header{
+    margin-bottom: 60px;
+}
+
+.album-container,
+.album-container .col-12{
+    padding: 0;
+}
+
+
+/* -------- Subscribe section ---------  */
+
+.subscribe-section{
+    padding: 80px 0;
+}
+
+.subscribe-section h1{
+    color: #fff;
+    margin-bottom: 18px;
+    letter-spacing: 5px;
+}
+
+.subscribe-section p{
+    font-size: 16px;
+}
+
+.inp-group{
+    display: flex;
+    position: relative;
+    margin-top: 70px;
+}
+
+.inp-group input[type='text']{
+    width: 87%;
+    height: 65px;
+    border: 1px solid #ff9d7d;
+    padding: 20px;
+}
+
+.inp-group button{
+    width: 12%;
+    background-color: #fff;
+    color: #000;
+    text-transform: uppercase;
+}
+
+/* -------- Process section --------- */
+
+.process-section{
+    padding: 80px 0 40px 0;
+}
+
+.process-section .container{
+    border-bottom: 1px solid #f1f1f1;
+    padding-bottom: 20px;
+}
+
+.process-section .section-header{
+    margin-bottom: 60px;
+}
+
+.process-section .post-content{
+    border:none;
+    padding-top: 20px;
+}
+
+.process-section .post-text{
+    padding:0;
+    padding-top: 10px;
+}
+
+.process-section .post-img{
+    height: 200px;
+}
+
+.process-section .post-img.n1{
+    background: url('../img/works/1.png') no-repeat center;
+}
+
+.process-section .post-img.n2{
+    background: url('../img/works/2.png') no-repeat center;
+}
+
+.process-section .post-img.n3{
+    background: url('../img/works/3.png') no-repeat center;
+}
+
+.process-section .post-img.n4{
+    background: url('../img/works/4.png') no-repeat center;
+}
+
+/* -------- Blog Section -------- */
+
+.blog-section{
+    padding: 70px 0;
+}
+
+.blog-section .section-header{
+    margin-bottom: 60px;
+}
+
+.blog-section a{
+    color: #272727;
+}
+
+.blog-section .post-content{
+    border:none;
+    padding-top: 40px;
+}
+
+.blog-section .post-text{
+    padding: 0;
+    padding-top: 20px;
+}
+
+.blog-section .calendar{
+    display: inline-block;
+    position: absolute;
+    height: 145px;
+    width: 125px;
+    right: 30px;
+    bottom: 30px;
+    padding: 25px 0 0 0;
+}
+
+.blog-section .calendar h1{
+    margin:0;
+    font: 36px 'Open Sans', sans-serif;
+    line-height: 36px;
+}
+
+.blog-section .calendar p{
+    margin: 0;
+    font-size: 13px;
+}
+
+.blog-section .calendar i{
+    font-size: 22px;
+    margin-top: 10px;
+}
+
+.blog-section .shapes{
+    position: absolute;
+    bottom: -30px;
+    left: 30px;
+    height: unset!important;
+    width: unset!important;
+}
+
+.blog-section .info-nav{
+    margin-top: 20px;
+    color: #b9b9b9;
+    font-size: 13px;
+}
+
+.blog-section .info-nav span+span{
+    margin-left: 20px;
+}
+
+/* -----------  Parallax section  ------------ */
+
+.parallax-section{
+    padding: 125px 0;
+    background: url('../img/mainPage/parall1.jpg') scroll no-repeat center center;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+}
+
+.parallax-section h6{
+    color: #fff;
+    letter-spacing: 31px;
+}
+
+.parallax-section h1{
+    color: #fff;
+    font-size: 90px;
+    line-height: 100px;
+    font-weight: bold;
+    margin-bottom: 50px;
+}
+
+/* -----------  Pricing section  ------------ */
+
+.pricing-section{
+    padding: 100px 0;
+}
+
+.pricing-section .section-header{
+    margin-bottom: 90px;
+}
+
+.prices div[class *= 'col']{
+    padding: 0;
+}
+
+.price{
+    background-color: #f6f6f6;
+    border: 1px solid #e4e4e4;
+}
+
+.price li{
+    padding: 16px 0;
+    font-size: 14px;
+    border-top: 1px solid #e4e4e4;
+}
+
+.price li:first-child{
+    padding-top: 60px;
+    padding-bottom: 30px;
+    border:none;
+}
+
+.price li:last-child{
+    padding: 45px 0;
+}
+
+.price-header p{
+     display: inline;
+     font-size: 16px;
+     color: #242424;
+}
+
+.price-header sup,
+.price-header span{
+    color: #242424;
+    font-weight: bold!important;
+    font: 26px 'Open Sans', sans-serif;
+}
+
+.price-header sup{
+    font-size: 22px;
+}
+
+.price-header h3{
+     font-weight: 600; 
+     line-height: 30px;
+     font-size: 26px;
+     margin-bottom: 10px;
+}
+
+.price.active{
+    position: relative;
+    top: -25px;
+    padding: 25px 0 20px 0;
+
+}
+
+.price.active li,
+.price.active{
+    color: #fff;
+    background: #fd602c;
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+.price.active sup,
+.price.active p,
+.price.active span,
+.price.active h3{
+    color: #fff;
+}
+
+.price.active .button{
+    background-color: #fff;
+    color: #000;
+}
+
+.price.active .button:hover{
+    background: #000;
+    color: #fff;
+}
+
+.prices div[class *= 'col'] .new-afish{
+    position: absolute;
+    z-index: 1;
+    right: -15px;
+    top: -39px;
+}
+
+/* ---------- Comments section -------- */
+
+.comments-section{
+    padding: 120px 0;
+    background: url('../img/mainPage/parall2.jpg') scroll no-repeat center center;
+    background-attachment: fixed;
+    background-size: cover;
+    position: relative;
+}
+
+.comments-section .overly{
+    background: rgba(0, 0, 0, 0.705);
+}
+
+.comments-section .section-header{
+    margin-bottom: 70px;
+}
+
+.comments-section .section-header>div::after{
+    background: #fff;
+}
+
+.comments-section .section-header h6,
+.comments-section .section-header h1{
+    color: #fff;
+}
+
+
+
+.fSlider{
+    overflow: hidden;
+}
+
+.fSlider ul li p{
+    margin-bottom: 50px;
+    line-height: 23px;
+}
+
+.fSlider h6{
+    color: #fff;
+}
+
+.fSlider ul{
+    position: relative;
+}
+
+.fSlider ul li{
+    float: left;
+}
+
+.fSlider .thumbnails{
+    position: relative;
+    display: inline-block;
+    left: 50%;
+    margin-top: 10px;
+}
+
+.fSlider .thumbnail{
+    height: 12px;
+    width:  12px;
+    border-radius: 100%;
+    background: rgba(255, 255, 255, 0.568);
+    display: inline-block;
+}
+
+.fSlider .thumbnail+.thumbnail{
+    margin-left: 10px;
+}
+
+/* --------- Brands section -------- */
+
+.brands-section{
+    padding: 50px 0;
+}
+
+.brands-section ul{
+    list-style: none;
+}
+
+.brands-section ul li{
+    float: left;
+}
+
+.brands-section ul li+li{
+    margin-left: 20px;
+}
+
+/* ---------- Orange section ----------*/
+
+.orange-section{
+    padding: 45px 0;
+}
+
+.orange-section h3{
+    margin-bottom: 18px;
+}
+
+.orange-section p{
+    margin-bottom: 10px;
+    line-height: 23px;
+}
+
+.orange-section .button{
+    border-radius: 0;
+    border: 1px solid #fff;
+    padding: 16px 60px;
+    position: relative;
+    right: 0;
+}
+
+.orange-section .button:hover{
+    background: #fff;
+    color: #000;
+}
+
+.orange-section .col-3 a{
+    position: relative;
+    bottom:0;
+    left: 100%;
+    top: 50%;
+    transform: translate(-100%,-50%)
+}
+
+/* --------- Footer --------- */
+
+footer{
+    background-color: #101010;
+}
+
+footer .section-header{
+    margin-bottom: 35px;
+}
+
+.footer-address img{
+    margin-bottom: 15px;
+}
+
+footer .section-header *{
+    color: #fff;
+}
+
+footer .section-header>div::after{
+    background: #fff;
+    height: 3px;
+    width: 28px;
+}
+
+.footer-menu{
+    padding: 80px 0;
+}
+
+.footer-address ul li{
+    padding: 12px 0;
+}
+
+.footer-address >p{
+    line-height: 24px;
+}
+
+.footer-address ul li i{
+    margin-right: 7px;
+    font-size: 12px;
+}
+
+.footer-address ul li:first-child{
+    padding-top: 0;
+}
+
+.footer-photos img{
+    border-radius: 100%;
+    float: left;
+    margin-right: 18px;
+}
+
+.footer-photos ul li p{
+    margin-bottom: 5px;
+    font-size: 13px;
+}
+
+.footer-photos ul li p+p{
+    color: #3b3a3a;
+}
+
+.footer-photos ul li:not(:first-child){
+    padding: 20px 0;
+    border-top: 1px solid #302f2f;
+}
+
+.footer-photos ul li:first-child{
+    padding-bottom:20px;
+}
+
+.footer-tags a{
+    padding: 6px 14px;
+    border: 1px solid #2e2d2d;
+    margin: 4px;
+    display: inline-block;
+}
+
+.footer-tags .tags{
+    margin-left: -4px;
+}
+
+.footer-tags a:hover,
+.footer-tags a.active{
+    border-color: #fd602c;
+    color: #fd602c;
+}
+
+.footer-links ul li{
+    padding: 6px 0;
+
+}
+
+.footer-links ul li i{
+    font-size: 12px;
+    margin-right: 5px;
+}
+
+footer section{
+    padding: 50px 0 40px 0;
+    background-color: #1a1a1a;
+}
+
+footer section a{
+    display: inline-block;
+}
+
+footer section a+a{
+    margin-left: 5px;
+}
+
+footer section .circle-icon{
+    padding: 20px;
+    border:none;
+    background: #fff;
+    color: #fd602c;
+}
+
+footer section .circle-icon i{
+    font-size: 13px;
+}
+
+.footer-icons{
+    margin-bottom: 25px;
+}
+
+/* =============================== LAYOUT PAGE ========================= */
+
+/* General classes */
+.section-header.ly >div::after{
+    background: #fd602c;
+    bottom: -18px;
+    height: 3.5px;
+    width: 45px;
+}
+
+.section-header.ly h2{
+    font-size: 28px;
+}
+
+.about-text{
+    width: 50%;
+    position: relative;
+    text-align:center;
+}
+
+
+/* ------------ Header ------------ */
+
+.header-line.green{
+    background-color: #f6f6f6;
+}
+
+.header-line.green a{
+    color: #8d8c8c;
+}
+
+/* ------------ Slider section ------------ */
+
+/* fSlider */
+
+/* --------- Orange section ---------- */
+
+.orange-section.ly{
+    padding: 25px 0;
+}
+
+/* --------- About section -------- */
+
+.about-section.ly{
+    padding: 80px 0;
+}
+
+.about-section.ly .about-txt{
+    padding-top: 40px;
+    width: 50%;
+    position: relative;
+    font-size: 16px;
+    margin-bottom: 70px;
+}
+
+.about-section.ly .circle-icon{
+    padding: 40px;
+    font-size: 24px;
+    color: #242424;
+}
+
+.about-section.ly .post{
+    border: 1px solid rgb(224, 224, 224);
+    padding: 40px 40px 40px 40px;
+    transition: all .2s ease;
+}
+
+.about-section.ly .post .post-title{
+    padding: 10px 0;
+}
+
+.about-section.ly .post .post-content{
+    border:none;
+    padding:0;
+}
+
+.about-section.ly .circle-icon i{
+    transition: all .5s ease;
+}
+
+/* ------------- Parallax section  -------------*/
+
+.parallax-section.ly{
+    padding:0;
+    padding-top: 80px;
+    background-image: url('../img/mainPage/5.jpg');
+}
+
+.parallax-section.ly .overly{
+    background-color: rgba(0, 0, 0, 0.692);
+}
+
+.parallax-section.ly .section-header{
+    margin: 65px 0;
+}
+
+.parallax-section.ly ul li{
+    padding: 18px 0;
+}
+
+.parallax-section.ly ul li p{
+    line-height: 25px;
+    padding-top: 10px;
+}
+
+.parallax-section.ly ul li .circle-icon{
+    padding: 40px;
+    font-size: 23px;
+    color: #fff;
+    border-color: #8d8c8c;
+    float: left;
+    margin-right: 20px;
+}
+
+.parallax-section.ly .col-lg-6+.col-lg-6{
+    padding-right: 0;
+}
+
+/* ---------- Green section ------------ */
+
+.orange-section.green{
+    background-color: #f6f6f6;
+    padding: 50px 0;
+}
+
+.orange-section.green .button{
+    background-color: #f6f6f6;
+    color: #000;
+    border-color: #000;
+}
+
+.orange-section.green .button:hover{
+    background: #000;
+    color: #fff;
+}
+
+/* ----------- Works section ----------- */
+
+.works-section.ly{
+    padding:0;
+    padding-top: 75px;
+}
+
+.works-section.ly .section-header{
+    margin-bottom: 40px;
+}
+
+.works-section.ly .about-text{
+    position: relative;
+    width: 50%;
+    margin-bottom: 70px;
+}
+
+/* ---------- Parallax section simple ----------*/
+
+.parallax-section.ly.simple{
+    padding: 80px 0;
+    background: url('../img/mainPage/parallax-5.jpg');
+    background-attachment: fixed;
+}
+
+.parallax-section.ly.simple .button{
+    border-radius: 2px;
+    background: transparent;
+    color: #fff;
+    border: 1px solid rgb(134, 134, 134);
+}
+
+.parallax-section.ly.simple .about-text{
+    margin-bottom: 60px;
+    margin-top: 10px;
+}
+
+.parallax-section.ly.simple .button:hover{
+    background: rgb(102, 102, 102);
+    border-color:  rgb(102, 102, 102);
+}
+
+/* -------------- Services section --------- */
+
+.services-section.ly{
+    background: #fff;
+    padding: 75px 0;
+}
+
+.services-section.ly .section-header {
+    margin-bottom: 40px;
+}
+
+.services-section.ly .about-text{
+    font-size: 16px;
+    margin-bottom: 70px;
+}
+
+.services-section.ly img{
+    width: 100%;
+}
+
+/* fSwipe slider settings */
+
+.services-section.ly .fSwipe-item{
+    width: 555px;
+}
+ 
+.services-section.ly .img-container{
+    float: left;
+    margin-right: 25px;
+}
+
+.services-section.ly .img-container img{
+    height: 145px;
+    width: 145px;
+}
+
+.services-section.ly .square-icon{
+    padding: 30px;
+    float: right;
+}
+
+.services-section.ly .content-container h4{
+    margin-bottom: 20px;
+}
+
+.services-section.ly .content-container p{
+    line-height: 20px;
+}
+
+.services-section.ly .comment + .comment{
+    margin-top: 70px;
+}
+
+.services-section.ly .fSwipe-slider .button{
+    background: transparent;
+    color: #fd602c;
+    padding:0;
+    margin-top: 40px;
+}
+
+.services-section.ly .fSwipe-slider .button i{
+    font-size: 11px;
+    margin-right: 5px;
+}
+
+/* ------- Client section --------- */
+
+.client-section{
+    background: url('../img/mainPage/parall3.jpg') scroll no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+    padding: 70px 0 100px 0;
+}
+
+.client-section .section-header{
+    margin-bottom: 30px;
+}
+
+.client-section .section-header h3{
+    color: #fff;
+}
+
+.client-section .section-header>div::after{
+    background: #fff;
+}
+
+.client-section .comment .img-container{
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    float: left;
+    margin-right: 20px;
+}
+
+.client-section .comment .img-container img{
+    width: 100%;
+    border-radius: 100%;
+}
+
+.client-section .about-text{
+    width: 100%;
+    color: #fff;
+    padding-bottom: 7px;
+    line-height: 22px;
+    margin:0;
+}
+
+.client-section .content-container{
+    position: relative;
+    transform: translateY(100%);
+}
+
+.client-section .fSwipe-item{
+    width: 555px;
+    
+}
+
+.client-section table{
+    border:0;
+}
+
+.client-section table td{
+    border-right: 1px solid rgba(255, 255, 255, 0.315);
+    padding: 5px;
+}
+
+.client-section table tr{
+    border-bottom: 1px solid rgba(255, 255, 255, 0.315);
+}
+
+.client-section table tr:last-child,
+.client-section table td:last-child{
+    border: 0;
+}
+
+/* ----------- Blog section ---------- */
+
+.blog-section.ly .about-text{
+    margin-bottom: 70px;
+    font-size: 16px;
+}
+
+.blog-post{
+    display: flex;
+    margin-bottom: 50px;
+     
+}
+
+.blog-post>div{
+   width: 100%;
+   
+}
+
+.blog-post-img{
+    padding: 70px 0px 40px 45px;
+    position: relative;
+    display: inline-block;
+}
+
+.blog-post-img img{
+    position: absolute;
+    top:0; left:0;
+    height: 100%;width:100%;
+    z-index: -1;
+}
+
+.blog-post-img::after{
+    position: absolute;
+    content: "";
+    background: rgba(0, 0, 0, 0.199);
+    height:100%; width:100%;
+    left:0; top:0;
+    z-index: 0;
+}
+
+.blog-post-header{
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+}
+
+.blog-post-header a{
+    color: #fff!important;
+    transition: all .2s ease;
+    cursor: pointer;
+}
+
+.blog-post-header a:hover{
+    color: #727272!important;
+}
+
+.blog-post-header span{
+    color: #fff;
+    font-size: 13px;
+}
+
+.blog-post-info i,
+.blog-post-header i{
+    margin-right: 5px;
+}
+
+.blog-post-header div span+span{
+    margin-left: 20px;
+}
+
+.blog-post-info{
+    margin-top: 143px;
+    position: relative;
+    z-index: 1;
+}
+
+.blog-post-info div{
+    background: #fd602c;
+    padding: 6px 10px;
+    border-radius: 40px;
+    color: #fff;
+    display: inline-block;
+    font-size: 13px;
+}
+
+.blog-post-info div + div{
+    margin-left: 5px;
+}
+
+.blog-post-content{
+    padding-left:  30px;
+    padding-right: 15px;
+}
+
+.blog-post-content .blog-post-header a{
+    color: #242424!important;
+}
+
+.blog-post-content .blog-post-header span{
+    color: #b9b9b9;
+}
+
+.blog-post-content p{
+    margin:0;
+    margin-top: 30px;
+}
+
+.blog-post.clm-2 .blog-post-img{
+     width: 100%;
+     padding: 70px 0px 30px 30px;
+}
+
+.blog-post.clm-2 .blog-post-info{
+    margin-top: 200px;
+}
+
+/* ------- AboutUs section ---------- */
+
+.aboutUs-section{
+    padding: 70px 0;
+}
+
+.aboutUs-section img{
+    width: 100%;
+}
+
+.aboutUs-section .square-icon{
+    background: #fff;
+    border: 1px solid #dfdfdf;
+    color: #272727;
+    padding: 19px;
+    margin-top: 5px;
+}
+
+.aboutUs-section .square-icon + .square-icon{
+    margin-left: 5px;
+}
+
+.aboutUs-section .section-header{
+    margin-bottom: 50px;
+}
+
+.aboutUs-section .col-6 .col-6 img{
+    margin-bottom: 30px;
+}
+
+/* ----------- Responsive section ----------*/
+
+.responsive-section{
+    padding: 100px 0;
+    background-color: #f6f6f6;
+}
+
+.responsive-section .row{
+    background: url('../img/mainPage/3.png') no-repeat;
+}
+
+.responsive-section .row .col-6{
+    margin-left: 50%;
+    padding-top: 30px;
+    padding-bottom: 150px;
+}
+
+.responsive-section .section-header{
+    margin-bottom: 40px;
+}
+
+.responsive-section .about-text{
+    width: 100%;
+    text-align: left;
+}
+
+.responsive-section ul li{
+    padding: 10px 0;
+}
+
+.responsive-section ul li i{
+    font-size: 13px;
+    color: #fd602c;
+    margin-right: 20px;
+}
+
+/* ------- mix section ---------- */
+
+.mix-section{
+    padding: 70px 0;
+}
+
+.mix-section .section-header{
+    margin-bottom: 60px;
+}
+
+.mix-section .tabSlide{
+    
+}
+
+.mix-section .tabSlide ul li{
+    padding: 20px 0px;
+}
+
+/* ------------ footer layout ------- */
+
+footer.ly{
+    background-color: #242424;
+}
+
+footer.ly section{
+    padding: 30px 0;
+}
+
+footer.ly .footer-menu{
+    padding-bottom: 50px;
+}
+
+footer.ly ul li{
+    border-bottom: 1px solid #444444;
+}
+
+footer.ly ul li:last-child{
+    border: none;
+}
+
+.ly .footer-photos img{
+    border-radius: 0;
+}
+
+.ly .footer-photos ul li{
+    padding: 20px 0;
+}
+
+.ly .footer-photos p{
+    line-height: 25px;
+}
+
+.ly .footer-photos a:hover{
+    color:#444444!important;
+}
+
+footer.ly .footer-links ul li{
+     padding: 12px 0;
+     border-color: #2c2c2c;
+}
+
+footer.ly .footer-news p{
+    line-height: 24px;
+    margin-top: 5px;
+    display: inline-block;
+}
+
+footer.ly .footer-news .inp-group{
+    margin-top: 15px;
+}
+
+footer.ly .footer-news input{
+    height: 18px;
+    padding-left: 5px;
+    padding-right: 0;
+    border: none;
+    width: 78%;
+}
+
+footer.ly .footer-news .button{
+    width: 22%;
+    padding: 10px 5px;
+    background: #fd602c;
+    color: #fff;
+}
+
+footer.ly .circle-icon{
+    padding: 20px;
+    border:none;
+    background-color: #444444;
+    color: #fff;
+}
+
+footer.ly .footer-icons{
+    margin-top: 30px;
+    margin-left: 10px;
+}
+
+footer.ly .footer-icons a + a{
+    margin-left: 5px;
+}
+
+/* ================ ABOUT PAGE  =================== */
+
+/* ------------ Section title --------------- */
+.section-title{
+    text-align: center;
+}
+
+.section-title h2{
+    font-size: 34px;
+    margin-bottom: 18px;
+}
+
+.section-title .about-text{
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 16px;
+}
+
+/* -------- header ---------- */
+
+.header-line.about{
+    border-bottom: 1px solid  #f3f3f3;
+}
+
+.header-line.about .col-12 .split {
+    border-right: 1px solid #dfdfdf;
+}
+
+.header-line.about a{
+    color: #8d8c8c;
+}
+
+/* ----------- Cover section ----------*/
+
+.cover-section{
+    color: #fff;
+    background: url('../img/mainPage/header.jpg') no-repeat scroll;
+    background-size: cover;
+    padding: 90px 0;
+    position: relative;
+}
+
+.cover-section .overly{
+    background: #0000007a;
+}
+
+.cover-content{
+    position: relative;
+    z-index: 1;
+    text-align: center;
+}
+
+.cover-content>*{
+    color: #fff;
+}
+
+/* ----------- Nav section ----------*/
+
+.nav-section{
+    padding: 20px 0;
+    border-bottom: 1px solid rgb(223, 223, 223);
+}
+
+.nav-section .flex-between> div{
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.nav-section a{
+    color: #444444;
+}
+
+/* ----------- About section ----------*/
+
+.about-section.about{
+    padding: 80px 0;
+}
+
+.about-section.about .section-title{
+    margin-bottom: 70px;
+}
+
+.about-section.about img{
+    width: 100%;
+}
+
+.about-section.about .article-title{
+    font-weight: 300;
+    font-size: 22px;
+    font-family: unset;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.about-section.about .text-column{
+    padding-left: 50px;
+}
+
+.about-section.about .text-column p{
+    line-height: 22px;
+    margin-bottom: 18px;
+}
+
+.about-section.about .sq-button{
+    background-color: #fd602c;
+    color:#fff;
+    margin-top: 30px;
+}
+
+/* --------  Parallax section ---------- */
+
+.parallax-section.about{
+    background-image: url('../img/mainPage/parall4.jpg');
+}
+
+.parallax-section.about h1{
+    font-size: 40px;
+    font-weight: 300;
+    margin-bottom: 40px;
+    line-height: 45px;
+}
+
+.parallax-section.about p{
+    line-height: 23px;
+}
+
+.parallax-section.about .sq-button{
+    background-color: #fd602c;
+    color:#fff;
+    margin-top: 15px;
+}
+
+.parallax-section.about .sq-button:hover{
+    background-color: #ffffff;
+    color:#444444;
+}
+
+/* --------------------- Mix section ---------------------*/
+
+.mix-section.about{
+    background-color: #f6f6f6;
+}
+
+.mix-section.about .section-title{
+    margin-bottom: 50px;
+}
+
+/* accardion settings */
+
+.mix-section.about .accardion li{
+    border: none;
+    margin-top: 5px;
+}
+
+.mix-section.about .accardion> li> p{
+    background: #fff;
+}
+
+.mix-section.about .accardion li ul{
+    background: transparent;
+}
+
+.mix-section.about .accardion >li>p i{
+    color: #444444;
+}
+
+.mix-section.about .accardion li.active> p{
+    color: #fd602c;
+}
+
+/* progress */
+.mix-section.about .progres ul li{
+    padding: 15px 0;
+}
+
+.mix-section.about .progres ul li:first-child{
+    padding-top: 0;
+}
+
+/* swipe slider setting */
+
+.mix-section.about .img-container,
+.mix-section.about .img-container img{
+    border-radius: 100%;
+}
+
+.mix-section.about .img-container{
+    border: 7px solid #fd602c;
+    display: inline-block;
+    float: left;
+    margin-right: 20px;
+}
+
+.mix-section.about .img-container img{
+    height: 110px;
+    width: 110px;
+}
+
+.mix-section.about .content-container{
+    padding-top: 10px;
+    margin-bottom: 90px;
+}
+
+.mix-section.about .slide-text{
+    background-color: #fff;
+    padding: 30px 30px 40px 30px;
+    line-height: 23px;
+    position: relative;
+    margin:0;
+}
+
+.mix-section.about .slide-text::after{
+    position: absolute;
+    content: "";
+    border-top:  10px solid rgb(255, 255, 255);
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 0;
+    bottom: -10px;
+    left: 55%;
+}
+
+/* ---------- Team section --------- */
+
+.team-section.about{
+    padding: 75px 0;
+}
+
+.team-section.about .section-title{
+    margin-bottom: 70px;
+}
+/* post settings */
+
+.team-section.about .post-content{
+    padding-top: 30px;
+}
+
+.team-section.about .post-content{
+    height: 140px;
+    border: none;
+    background: #fff;
+    z-index: 2;
+}
+
+.team-section.about .post-text{
+    background: #fff;
+    padding-top: 30px;
+}
+
+.team-section.about .post:hover .post-content{
+    transform: translateY(-110%);
+}
+
+/* ------- footer ---------- */
+footer.about{
+    background-color: #242424;
+}
+
+footer.about .footer-address ul li{
+    border-top: 1px solid #313131;
+}
+
+footer.about .footer-address p{
+    margin-bottom: 10px;
+}
+
+footer.about .footer-address ul li:first-child{
+    padding-top: 10px;
+}
+
+footer.about .footer-links ul li{
+    border-bottom: 1px solid #313131;
+    padding: 10px 0;
+}
+
+footer.about .footer-links ul li:last-child{
+    border: none;
+}
+
+/* ==================== TEAM PAGE ================= */
+
+/* ---------- Text section --------- */
+.text-section{
+    padding: 80px 0 55px 0;
+    border-bottom: 1px solid rgb(223, 223, 223);
+}
+
+.text-section .about-text{
+    width: 100%;
+    text-align: center;
+    font-weight: 300;
+}
+
+/* ------------- Team section ---------- */
+.team-section.team{
+    padding: 60px 0 40px 0;
+}
+
+.team-section.team .section-title{
+    margin-bottom: 70px;
+}
+
+.team-section.team .post{
+    margin-bottom: 50px;
+    background-color: #f6f6f6;
+}
+
+.team-section.team .post .post-content{
+    padding-top: 40px;
+    border:none;
+    background-color: #f6f6f6;
+}
+
+.team-section.team .post h5{
+    margin:0;
+}
+
+.team-section.team .post .post-text{
+    padding: 20px 20px 10px 20px;
+}
+
+.team-section.team .post-icons{
+    padding: 17px 0;
+    background: #fd602c;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    transform: translateY(100%);
+    transition: all .3s ease;
+}
+
+.team-section.team .post-icons a{
+    color: #fff;
+}
+
+.team-section.team .post.active .post-content,
+.team-section.team .post:hover .post-content{
+    background: #242424;
+    transform: translateY(0);
+}
+
+.team-section.team .post.active h5,
+.team-section.team .post:hover h5{
+    color: #fff;
+}
+
+.team-section.team .post:hover img{
+    transform: scale(1);
+}
+
+.team-section.team .post.active .post-icons,
+.team-section.team .post:hover .post-icons{
+    transform: translateY(0);
+}
+
+.team-section.team .post-icons a:hover{
+    color: #101010;
+}
+
+.team-section.team .post-icons ul li{
+    float: left;
+}
+
+.team-section.team .post-icons ul li + li{
+    margin-left: 20px;
+}
+
+/* ------ footer ------- */
+
+footer.team{
+    background-color: #242424;
+}
+
+footer.team section{
+    padding: 50px 0 50px 0;
+}
+
+/* ===================== SERVICES PAGE ===================== */
+
+.text-section.service{
+    border: none;
+}
+
+/* -------- tab section -------- */
+
+.tab-section> .container{
+    border-bottom: 1px solid rgb(223, 223, 223);
+    padding-bottom: 80px;
+}
+
+.tab-section .tabSlide> ul{
+    width: 50%;
+    margin-bottom: 60px;
+}
+
+.tab-section .tabSlide> ul li{
+    background: #fff;
+    border: 1px solid #e0e0e0!important;
+    padding: 12px 10px;
+    font-size: 18px;
+    width: auto;
+}
+.tab-section .tabSlide> ul li:hover{
+    color: #fd602c;
+    background-color: #fff;
+    border-color: #fff;
+}
+
+.tab-section .tabSlide> ul li+li{
+    margin-left: 5px;
+}
+
+.tab-section .tabSlide-content ul{
+    margin-bottom: 30px;
+}
+
+.tab-section .tabSlide-content ul li{
+    padding: 10px 0;
+}
+
+.tab-section .tabSlide-content .col-6 + .col-6{
+    padding-left: 30px;
+}
+
+.tab-section .tabSlide-content h3{
+    margin-bottom: 30px;
+}
+
+.tab-section .tabSlide-content i{
+    font-size: 13px;
+    margin-right: 15px;
+}
+
+/* ------- settings section --------- */
+
+.settings-section{
+    padding: 80px 0;
+}
+
+.settings-section .circle-icon{
+   float: left;
+}
+
+.settings-section .text-div{
+    margin-left: 100px;
+}
+
+.settings-section .text-div h4{
+    font-weight: 300;
+    margin-bottom: 20px;
+}
+
+.settings-section .col-lg-4{
+    margin-bottom: 60px;
+}
+
+/* --------- Parallax section copy from about --------- */
+
+.parallax-section.about.services{
+    background: url('../img/mainPage/parallax5.jpg') no-repeat scroll center center;
+    background-size: cover;
+    background-attachment: fixed;
+    padding: 100px 300px;
+}
+
+.parallax-section.about.services h2{
+    font-weight: 300;
+}
+
+.parallax-section.about.services .button{
+    margin-top: 60px;
+}
+
+/* -------- Post section ---------- */
+
+.post-section{
+    padding: 70px 0 50px 0;
+}
+
+.post-section .post-content{
+    border: none;
+    padding-top: 20px;
+}
+
+.post-section .post-content h4{
+    font-weight: 300;
+}
+
+.post-section .post-content h4 a{
+    color: #444444
+}
+
+.post-section .post-content .post-text{
+    padding: 0;
+}
+
+.post-section .post-content .button{
+    margin-top: 30px;
+    padding: 11px 20px;
+}
+
+/* ---------- Article section ----------- */
+
+.article-section{
+    padding-bottom: 80px;
+}
+
+.article-section .post-content{
+    padding: 40px;
+}
+
+.article-section .post-content p{
+    line-height: 23px;
+    padding-top: 10px;
+}
+
+.article-section .post-content a{
+    margin-top: 35px;
+    display: block;
+}
+
+.article-section .post-content a i{
+    margin-right: 5px;
+}
+
+/* =============== Careers PAGE ==================== */
+
+.tab-section.careers{
+    padding: 70px 0 60px 0;
+}
+
+.tab-section.careers .container{
+    border: none;
+    padding-bottom: 0;
+}
+
+.tab-section.careers .tabSlide> ul{
+    width: auto;
+    margin-bottom: 10px;
+}
+
+.tab-section.careers .tabSlide> ul li{
+    font-size: 17px;
+}
+
+.tab-section.careers .tabSlide-content{
+    border: 1px solid #b9b9b9;
+    padding: 20px 50px 50px 50px;
+    height: auto!important;
+    box-sizing: content-box;
+    margin-top: 0;
+}
+
+.tab-section.careers .tabSlide-content ul{
+    padding-top: 30px;
+}
+
+.tab-section.careers .tabSlide-content ul i{
+    color: #fd602c;
+}
+
+.tab-section.careers .button{
+    margin-top: 20px;
+}
+
+/* --------------- Acc section1 -----------*/
+
+.acc-section1 .accardion li ul li>* {
+    padding: 10px 0px 10px 0px;
+    line-height: 25px;
+}
+
+.acc-section1 .accardion li ul li i{
+    font-size: 14px;
+    color: #fd602c;
+}
+
+.acc-section1 .accardion li ul div p{
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+.acc-section1 .button{
+    margin-top: 40px;
+    margin-bottom: 100px;
+}
+
+.acc-section1 .accardion >li >p >i{
+    background: #727272;
+    border-radius: 100%;
+    padding: 5px;
+    color: #fff;
+    font-size: 16px;
+}
+
+/*  ----------- Categories section ------- */
+
+.categories{
+    padding: 70px 0 50px 0;
+}
+
+.categories ul li{
+    padding: 12px 0;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.categories ul li:hover a{
+    color: rgb(255, 62, 62);
+}
+
+.categories ul li:last-child{
+    border:none;
+}
+
+/* ------ search section ------ */
+
+.search-section .src-group{
+    display: flex;
+    width: 100%;
+}
+
+.search-section .src-group input{
+    height: 40px;
+    border: 1px solid #d4d4d4;
+    flex: 4;
+    border-right: none;
+}
+
+.search-section .src-group button{
+    border: 1px solid #d4d4d4;
+    background: #fdfdfd;
+    color: #696969;
+    flex: 1;
+}
+
+/* ---------- Posts section ----------- */
+
+.posts-section{
+    padding: 40px 0 20px 0;
+}
+
+.posts-section ul li{
+    border: none!important;
+    padding: 10px 0!important;
+}
+
+.posts-section ul li:hover a{
+    color: rgb(255, 55, 55)!important;
+}
+
+.posts-section  h5 a{
+    color: #444444!important;
+    font-size: 16px;
+}
+
+.posts-section ul li p{
+    color: #5f5f5f;
+    font-size: 14px;
+}
+
+.posts-section ul li p+p{
+    color: #c5c5c5;
+    font-size: 12px;
+}
+
+/* ---------- Tag section ----------- */
+
+.footer-tags.tag a{
+    border-color: #dfdfdf;
+}
+
+.footer-tags.tag a:hover{
+    color: #fff;
+    background:#fd602c;
+}
+
+/* ---------- featured section ----------- */
+
+.featured-section{
+    padding: 20px 0;
+}
+
+.featured-section .feature{
+    
+    padding-left: -5px;
+    width: 100%;
+    flex-direction: row;
+}
+
+.featured-section .feature img{
+    width: 26%;
+    height: 58%;
+    object-fit: cover;
+    float: left;
+    margin: 3px;
+}
+
+/* ================== FAQ PAGE ============ */
+
+.acc-section1.faq{
+    margin-top: 80px;
+}
+
+.acc-section1.faq h3{
+    margin-bottom: 20px;
+}
+
+
+/* ================== REGISTER PAGE ============ */
+
+.container .col-7.registr{
+    border: 1px solid rgb(223, 223, 223);
+    margin-top: 80px;
+    padding: 30px 50px;
+    margin-bottom: 80px;
+}
+
+.error-box{
+    padding: 10px;
+    background: rgb(255, 108, 108);
+    color: #fff;
+    display: none;
+    margin-bottom: 20px;
+}
+
+.container .col-7.registr h3{
+    margin-bottom: 40px;
+}
+
+.container .col-7.registr .button{
+    margin-top: 20px;
+}
+
+.container .col-7.registr .row > div{
+    margin-bottom: 20px;
+}
+
+.cost-input{
+    border: 1px solid rgb(223, 223, 223);
+    display: flex;
+    transition: all .5s ease;
+}
+
+.cost-input:hover{
+    border-color: #4ebd4a;
+}
+
+.cost-input select:focus{
+    background: #fff;
+}
+
+.cost-input .input-icon{
+    width: auto;
+    padding: 0 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cost-input .input-icon i{
+    color: rgb(184, 184, 184);
+    font-size: 13px;
+}
+
+.cost-input-checkbox label a{
+    color: #4ebd4a;
+}
+
+.cost-input-checkbox label a:hover{
+    text-decoration: underline;
+}
+
+.cost-input > select,
+.cost-input > input{
+    border: none;
+    width: 100%;
+    padding: 10px;
+    outline: none;
+    color: #626262;
+}
+
+.cost-input select{
+    background: #F5F5F5;
+}
+
+
+.input-prepend,
+.input-append{
+    position: relative;
+    background: #F5F5F5;
+    padding: 0px 15px;
+    display: block;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.input-prepend{
+    width: 25%;
+}
+
+.input-prepend + div{
+    margin-left: -25px;
+    z-index: 2;
+}
+
+.cost-input-checkbox{
+    width: 100%;
+    position: relative;
+}
+
+.cost-input-checkbox input[type="checkbox"]{
+    height: 20px;
+    width: 20px;
+    border: 2px solid #bdbdbd;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    top: 3px;
+    position: relative;
+    outline: none;
+}
+
+.cost-input-checkbox label::after{
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 0;
+    height: 20px;
+    width: 20px;
+    font-size: 15px;
+    text-align: center;
+    line-height: 19px;
+    color: #4ebd4a;
+    font-weight: bold;
+    top: 3px;
+}
+
+.cost-input-checkbox input[type="checkbox"]:checked{
+    border-color: #4ebd4a;
+}
+.cost-input-checkbox input[type="checkbox"]:checked ~ label::after{
+    content: "\2713";
+}
+
+.cost-input textarea{
+    width: 100%;
+    height: 100px;
+    border: none;
+    outline: none;
+    transition: all .5s ease;
+}
+
+.cost-input textarea:focus{
+    height: 120px;
+}
+
+.cost-input:hover + .hint{
+    outline: 1px solid #4ebd4a;
+}
+
+.hint{
+    width: 100%;
+    transition: all .5s ease;
+    background: #F5F5F5;
+    padding: 10px 5px;
+    border: 1px solid #d6d6d6;
+}
+
+/* ============= CONTACT PAGE =============== */
+
+.contact-section{
+    padding: 100px 0;
+}
+
+.contact-section > p{
+    padding-bottom: 40px;
+}
+
+.contact-section .cost-input:not(.first){
+    margin-top: 20px;
+}
+
+.contact-section input{
+    color: rgb(59, 59, 59)
+}
+
+.contact-section form .button{
+    margin-top: 20px;
+}
+
+.contact-section .button{
+    padding: 11px 50px;
+}
+
+.contact-section .button.cancel{
+    background: rgb(228, 228, 228);
+    color: #000;
+    margin-left: 10px;
+}
+
+.alert-box{
+    font-size: 12px;
+    color: red;
+    margin-top: 5px;
+}
+
+.contact-section input[type='submit']{
+    color: #fff;
+    color: rgb(235, 255, 235);
+}
+
+/* --------- Address section ------- */
+
+.addres-section{
+    padding: 100px 0 40px 0;
+}
+
+.map-section h4,
+.addres-section h4{ 
+    margin-bottom: 20px;
+}
+
+.addres-section p{
+    line-height: 23px;
+}
+
+.addres-section p + p{
+    margin-top: 30px;
+}
+
+.mapouter{
+    background: #000;
+}
+
+.gmap_canvas{
+    opacity: .6;
+}
